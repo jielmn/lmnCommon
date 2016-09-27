@@ -1,2 +1,2 @@
 # lmnCommon
-common functions collected
+My common functions collection.
