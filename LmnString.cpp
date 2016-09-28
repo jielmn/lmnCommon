@@ -8,9 +8,7 @@
 
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 
 
 static const char  s_base64_alphabet[] = 
@@ -909,9 +907,6 @@ COMMONLMN_API  int  StrNiCmp( IN const char * s1, IN const char * s2, IN DWORD d
 
 
 
-#ifdef __cplusplus
-} // extern "C" { 
-#endif
 
 
 

@@ -137,9 +137,6 @@ typedef unsigned char       BYTE;
 
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 
 
@@ -484,20 +481,6 @@ COMMONLMN_API  BOOL  DeinitList( IN PList pList );
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-#ifdef __cplusplus
-} // extern "C" { 
-#endif
 
 
 
