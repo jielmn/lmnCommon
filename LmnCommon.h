@@ -1306,7 +1306,7 @@ COMMONLMN_API  int  Utf8Stream2UnicodeStream( IN const BYTE * pUtf8, IN DWORD dw
 
 
 
-typedef enum ELmnFileType
+enum ELmnFileType
 {
     E_FILE_TYPE_NONE,
     E_FILE_TYPE_FILE,
