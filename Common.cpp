@@ -2,15 +2,18 @@
 //
 
 #include "StdAfx.h"
+
+#if VLD_ON
+#if  defined(WIN32) && defined(_DEBUG)
+#include "vld.h"
+#endif
+#endif
+
 #include <malloc.h>
 #include <string.h>
 #include "Inner.h"
 
-#if VLD_ON
-#ifdef WIN32
-#include "vld.h"
-#endif
-#endif
+
 
 AllocMemCb  g_pfnAllocMem = malloc;
 FreeMemCb   g_pfnFreeMem  = free;

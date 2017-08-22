@@ -4,6 +4,7 @@
 	Version="9.00"
 	Name="Common"
 	ProjectGUID="{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}"
+	RootNamespace="Common"
 	TargetFrameworkVersion="0"
 	>
 	<Platforms>
@@ -48,7 +49,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;COMMON_EXPORTS;DEBUG;"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;COMMON_EXPORTS;DEBUG;VLD_ON"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
@@ -77,14 +78,14 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="Ws2_32.lib"
-				OutputFile="Debug/LmnCommon.dll"
+				OutputFile="Debug/LmnCommonD.dll"
 				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				GenerateDebugInformation="true"
 				ProgramDatabaseFile=".\Debug/LmnCommon.pdb"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Debug/LmnCommon.lib"
+				ImportLibrary=".\Debug/LmnCommonD.lib"
 				TargetMachine="1"
 			/>
 			<Tool

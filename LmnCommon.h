@@ -29,7 +29,7 @@
 #include <pthread.h>
 #endif
 
-
+#include <stdio.h>
 
 // 防止和windows的头文件定义冲突
 #ifndef _WINDEF_ 
@@ -1384,6 +1384,8 @@ COMMONLMN_API int CloseFileStream( IN HFileStream h );
 
 
 COMMONLMN_API  int  GetFileStreamPos( IN HFileStream h, IN TFileStreamPos * pPosition );
+
+
 
 
 

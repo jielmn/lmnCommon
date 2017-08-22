@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Common", "Common.vcproj", "{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lemon_gtest", "lemon_gtest\lemon_gtest.vcproj", "{B4CFD919-62AE-41FB-95BD-77B7D576CC1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}.Debug|Win32.Build.0 = Debug|Win32
+		{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}.Release|Win32.ActiveCfg = Release|Win32
+		{969B6E00-B1D7-4DDA-A9B0-4B383A03B55C}.Release|Win32.Build.0 = Release|Win32
+		{B4CFD919-62AE-41FB-95BD-77B7D576CC1D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4CFD919-62AE-41FB-95BD-77B7D576CC1D}.Debug|Win32.Build.0 = Debug|Win32
+		{B4CFD919-62AE-41FB-95BD-77B7D576CC1D}.Release|Win32.ActiveCfg = Release|Win32
+		{B4CFD919-62AE-41FB-95BD-77B7D576CC1D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
