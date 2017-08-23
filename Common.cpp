@@ -118,12 +118,25 @@ COMMONLMN_API  DWORD  LmnCommon::CDataBuf::CalcReqBufLen( DWORD dwReqLen )
 {
     DWORD  dwMin = MIN_BLOCK_SIZE;
 
-    while( dwMin <= dwReqLen )
+    while( dwMin < dwReqLen )
     {
         dwMin *= 2;
     }
 
     return dwMin;
+}
+
+COMMONLMN_API  LmnCommon::CDataBuf::CDataBuf( const CDataBuf & obj )
+{
+	Clear();
+	Append( obj.GetData(), obj.GetDataLength() );
+}
+
+COMMONLMN_API  LmnCommon::CDataBuf & LmnCommon::CDataBuf::operator =( const CDataBuf & obj )
+{
+	Clear();
+	Append( obj.GetData(), obj.GetDataLength() );
+	return *this;
 }
 
 

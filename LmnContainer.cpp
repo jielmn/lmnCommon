@@ -1928,6 +1928,42 @@ COMMONLMN_API  BOOL GetHashtableValue( PHashtable pHt, const void * pKey, void *
 	}
 }
 
+
+COMMONLMN_API  PHashNode GetHashtableNode( PHashtable pHt, const void * pKey  )
+{
+	if ( NULL == pHt )
+	{
+		return NULL;
+	}
+
+	void ** pAddr = (void **)pHt;
+	PHashtable_ pHt_ = (PHashtable_)(*pAddr);
+
+	if ( NULL == pHt_ )
+	{
+		return NULL;
+	}
+
+	DWORD dwHash  = _GetHashValue( pHt_->pfnHash, pKey );
+	DWORD dwIndex = _GetHashIndex( dwHash, pHt_->dwListSize ); 
+	PList_ pList_ = pHt_->ppList_[dwIndex];
+	if ( NULL == pList_ )
+	{
+		return NULL;
+	}
+
+	PHashNode_ pFindNode_ = _GetHashNodeByKey( pList_, pKey, pHt_->pfnCmp );
+	// Èç¹ûÕÒµ½
+	if ( pFindNode_ )
+	{
+		return (PHashNode)pFindNode_;
+	}
+	else
+	{
+		return NULL;
+	}
+}
+
 COMMONLMN_API  PHashNode GetHashtableFirstNode( PHashtable pHt )
 {
 	if ( NULL == pHt )

@@ -642,6 +642,7 @@ COMMONLMN_API  BOOL         IfHashtableContainKey( PHashtable pHt, const void * 
 
 // 根据key获取hashtable的某项值
 COMMONLMN_API  BOOL         GetHashtableValue( PHashtable pHt, const void * pKey, void ** ppValue );
+COMMONLMN_API  PHashNode    GetHashtableNode( PHashtable pHt, const void * pKey  );
 
 // 获取hashtable的第一项值(可用于遍历)
 COMMONLMN_API  PHashNode    GetHashtableFirstNode( PHashtable pHt );
@@ -1465,6 +1466,10 @@ namespace LmnCommon
     public:
         COMMONLMN_API  CDataBuf( const void * pData = 0, DWORD dwDataLen = 0 );
         COMMONLMN_API  ~CDataBuf();
+
+		COMMONLMN_API  CDataBuf( const CDataBuf & obj );
+		COMMONLMN_API  CDataBuf & operator =( const CDataBuf & obj );
+
         COMMONLMN_API  BOOL Append( const void * pData, DWORD dwDataLen );                        // 写入数据到末尾
         COMMONLMN_API  void Clear();
 
