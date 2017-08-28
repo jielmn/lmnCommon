@@ -65,7 +65,7 @@ static DWORD _Insert2Array( IN PArray_ pArray_,  IN DWORD dwIndex,
 	}
 
     // 从dwIndex下标开始，往后挪一个位置
-    memmove( pArray_->ppData + dwIndex,  pArray_->ppData + dwIndex + 1, 
+    memmove( pArray_->ppData + dwIndex + 1,  pArray_->ppData + dwIndex, 
              sizeof(void *) * ( pArray_->dwCount - dwIndex ) );
 
     // 对索引为dwIndex的位置赋值

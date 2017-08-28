@@ -21,6 +21,48 @@ TEST( String, StrTrim )
 	ASSERT_EQ( 0, ret );
 }
 
+TEST( CONTAINER, ARRAY )
+{
+	PArray p = InitArray(0);
+
+	DWORD ret = Append2Array(p,(void*)1);
+	ASSERT_EQ( 0, ret );
+
+	ret = Insert2Array(p,0,(void*)2);
+	ASSERT_EQ( 0, ret );
+
+	ret = Insert2Array(p,0,(void*)3);
+	ASSERT_EQ( 0, ret );
+
+	DWORD n = GetArraySize( p );
+	ASSERT_EQ( 3, n );
+
+	int num = (int)GetFromArray( p, 0 );
+	ASSERT_EQ( 3, num );
+
+	num = (int)GetFromArray( p, 1 );
+	ASSERT_EQ( 2, num );
+
+	num = (int)GetFromArray( p, 2 );
+	ASSERT_EQ( 1, num );
+
+
+
+	BOOL bRet = EraseArray( p, 0 );
+	ASSERT_TRUE( bRet?true:false );
+
+	n = GetArraySize( p );
+	ASSERT_EQ( 2, n );
+
+	bRet = EraseArray( p, 0 );
+	ASSERT_TRUE( bRet?true:false );
+
+	n = GetArraySize( p );
+	ASSERT_EQ( 1, n );
+
+	DeinitArray( p );
+}
+
 
 int main(int argc, TCHAR* argv[])
 {
